@@ -8,7 +8,7 @@ def reactor_calculation(x_const,y_const,z_const,blocks_in):
     blocks[1:-1,1:-1,1:-1] = np.array(blocks_in)
     basis_list = np.array([[0,0,1],[0,0,-1],[0,1,0],[0,-1,0],[1,0,0],[-1,0,0]])
 
-    coeff_fn=[1,3,6,10,15,21,28]
+    coeff_fn={0:1,1:3,2:6,3:10,4:15,5:21,6:28}
 
     heat = np.zeros((x_const+2,y_const+2,z_const+2))
     power = np.zeros((x_const+2,y_const+2,z_const+2))
